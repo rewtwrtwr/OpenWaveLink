@@ -1,0 +1,24 @@
+[package]
+name = "owl-app"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+owl-core = { workspace = true }
+owl-ipc = { workspace = true }
+tauri = { workspace = true, features = ["custom-protocol"] }
+windows = { workspace = true }
+windows-core = { workspace = true }
+tokio = { workspace = true }
+tokio-tungstenite = { workspace = true }
+futures-util = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+log = { workspace = true }
+env_logger = { workspace = true }
+anyhow = { workspace = true }
+
+[build-dependencies]
+tauri-build = { workspace = true }

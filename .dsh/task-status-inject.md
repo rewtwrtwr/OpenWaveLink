@@ -1,0 +1,1 @@
+[TASK STATUS] Phase: Fixing 9 User Requirements (Config, Audio Loop, UI Redesign, Hidden Daemon) | Next: 1.Проверка на слух: cargo run -p owl-app → видео в Chrome → селектор on → «Speakers (Sound Blaster Play! 3)» → убед

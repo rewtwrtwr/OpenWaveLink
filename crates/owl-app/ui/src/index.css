@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================================================================
+   OpenWaveLink — Elgato Wave Link 3.0 style.
+   Strict matte graphite minimalism. Tokens: INTERNAL_ENGINE_CONTRACT.md §6.
+   HARD RULES: no neon, no glows, no gradients, no coloured borders.
+   =========================================================================== */
+
+:root {
+  color-scheme: dark;
+
+  --owl-bg: #121214;
+  --owl-input-row: #18181b;
+  --owl-card: #202024;
+  --owl-empty: #151518;
+  --owl-mix-header: #1c1c20;
+  --owl-dropdown: #1c1c20;
+  --owl-search: #141416;
+  --owl-search-border: #303036;
+  --owl-monitor: #ffffff;
+  --owl-thumb: #d4d4d8;
+  --owl-track: #27272a;
+  --owl-progress: #22c55e;
+  --owl-mute-bg: #2e1417;
+  --owl-mute-border: #ef4444;
+  --owl-category: #a1a1aa;
+  --owl-primary: #f4f4f5;
+  --owl-secondary: #71717a;
+  --owl-border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--owl-bg);
+  color: var(--owl-primary);
+  user-select: none;
+  -webkit-user-select: none;
+  font-family: "Segoe UI Variable Text", "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+}
+
+/* Windows 11 Mica / Acrylic — pure matte neutral graphite */
+.fluent-mica {
+  background-color: rgba(18, 18, 20, 0.96);
+  backdrop-filter: blur(36px);
+  -webkit-backdrop-filter: blur(36px);
+}
+
+.fluent-acrylic {
+  background-color: rgba(24, 24, 27, 0.98);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+/* ---------------------------------------------------------------------------
+   Sliders — wide, comfortable rounded pill style like Wave Link 3.0 (neutral silver/grey)
+   --------------------------------------------------------------------------- */
+input[type="range"].wl-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #27272a;
+  height: 16px;
+  border-radius: 9999px;
+  outline: none;
+  transition: background-color 0.15s ease;
+}
+
+input[type="range"].wl-slider:hover {
+  background: #323238;
+}
+
+input[type="range"].wl-slider:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+input[type="range"].wl-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #d4d4d8;
+  border: 2px solid #18181b;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+input[type="range"].wl-slider::-webkit-slider-thumb:hover {
+  background: #ffffff;
+  transform: scale(1.08);
+}
+
+input[type="range"].wl-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #d4d4d8;
+  border: 2px solid #18181b;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+input[type="range"].wl-slider::-moz-range-thumb:hover {
+  background: #e0a0e8;
+}
+
+input[type="range"].wl-slider::-moz-range-track {
+  background: var(--owl-track);
+  height: 4px;
+  border-radius: 9999px;
+}
+
+/* Vertical variant (master bus faders) */
+input[type="range"].wl-slider-vertical {
+  writing-mode: vertical-lr;
+  direction: rtl;
+  width: 4px;
+  height: 100%;
+}
+
+/* ---------------------------------------------------------------------------
+   Scrollbars — neutral dark grey, never purple
+   --------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a42;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4a54;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3a3a42 transparent;
+}
+
+/* ---------------------------------------------------------------------------
+   Shared surface helpers (kept flat: 1px neutral border, no glow)
+   --------------------------------------------------------------------------- */
+.owl-card {
+  background-color: var(--owl-input-row);
+  border: 1px solid var(--owl-border);
+  border-radius: 0.5rem;
+}
+
+.owl-heading {
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--owl-category);
+}

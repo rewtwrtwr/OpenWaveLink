@@ -1,0 +1,122 @@
+;;
+;; OpenWaveLink Virtual Audio WDM WaveRT Driver
+;; Windows 11 x64 Architecture
+;; Copyright (c) 2026 OpenWaveLink Team. All Rights Reserved.
+;; Licensed under MIT / MS-PL
+;;
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = MEDIA
+ClassGUID   = {4d36e96c-e325-11ce-bfc1-08002be10318}
+Provider    = %ProviderName%
+CatalogFile = OpenWaveLinkAudio.cat
+DriverVer   = 03/30/2026,1.0.0.0
+PnpLockdown = 1
+
+[SourceDisksNames]
+222 = %DiskDescription%,,,
+
+[SourceDisksFiles]
+OpenWaveLinkAudio.sys = 222
+
+[DestinationDirs]
+DefaultDestDir = 13 ; Driver Store directory in Windows 11
+
+[Manufacturer]
+%ManufacturerName% = OpenWaveLinkAudio, NTamd64.10.0
+
+[OpenWaveLinkAudio.NTamd64.10.0]
+%DeviceDesc% = OpenWaveLinkAudio_Device, root\OpenWaveLinkAudio
+
+[OpenWaveLinkAudio_Device.NTamd64]
+Include   = ks.inf, wdmaudio.inf
+Needs     = KS.Registration, WDMAUDIO.Registration, DRV_GLOBAL.Registration
+CopyFiles = OpenWaveLinkAudio_CopyFiles
+AddReg    = OpenWaveLinkAudio_AddReg
+
+[OpenWaveLinkAudio_CopyFiles]
+OpenWaveLinkAudio.sys,,,0x00000010
+
+[OpenWaveLinkAudio_AddReg]
+HKR,,AssociatedFilters,,"wdmaud,swmidi,redbook"
+HKR,,Driver,,OpenWaveLinkAudio.sys
+HKR,,NTMPDriver,,"OpenWaveLinkAudio.sys,sb16.sys"
+
+[OpenWaveLinkAudio_Device.NTamd64.Interfaces]
+; Playback Endpoint: OpenWaveLink Out (Stream Mix)
+AddInterface = %KSCATEGORY_AUDIO%,  %KSNAME_WaveRender%, OpenWaveLinkAudio.WaveRender
+AddInterface = %KSCATEGORY_RENDER%, %KSNAME_WaveRender%, OpenWaveLinkAudio.WaveRender
+
+; Capture Endpoint 1: OpenWaveLink MicFX (Processed Voice)
+AddInterface = %KSCATEGORY_AUDIO%,   %KSNAME_WaveMicFX%, OpenWaveLinkAudio.WaveMicFX
+AddInterface = %KSCATEGORY_CAPTURE%, %KSNAME_WaveMicFX%, OpenWaveLinkAudio.WaveMicFX
+
+; Capture Endpoint 2: OpenWaveLink Stream In
+AddInterface = %KSCATEGORY_AUDIO%,   %KSNAME_WaveStreamIn%, OpenWaveLinkAudio.WaveStreamIn
+AddInterface = %KSCATEGORY_CAPTURE%, %KSNAME_WaveStreamIn%, OpenWaveLinkAudio.WaveStreamIn
+
+; Topology
+AddInterface = %KSCATEGORY_AUDIO%,    %KSNAME_Topology%, OpenWaveLinkAudio.Topology
+AddInterface = %KSCATEGORY_TOPOLOGY%, %KSNAME_Topology%, OpenWaveLinkAudio.Topology
+
+[OpenWaveLinkAudio.WaveRender]
+AddReg = OpenWaveLinkAudio.WaveRender.AddReg
+
+[OpenWaveLinkAudio.WaveRender.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%WaveRender.FriendlyName%
+
+[OpenWaveLinkAudio.WaveMicFX]
+AddReg = OpenWaveLinkAudio.WaveMicFX.AddReg
+
+[OpenWaveLinkAudio.WaveMicFX.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%WaveMicFX.FriendlyName%
+
+[OpenWaveLinkAudio.WaveStreamIn]
+AddReg = OpenWaveLinkAudio.WaveStreamIn.AddReg
+
+[OpenWaveLinkAudio.WaveStreamIn.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%WaveStreamIn.FriendlyName%
+
+[OpenWaveLinkAudio.Topology]
+AddReg = OpenWaveLinkAudio.Topology.AddReg
+
+[OpenWaveLinkAudio.Topology.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%Topology.FriendlyName%
+
+[OpenWaveLinkAudio_Device.NTamd64.Services]
+AddService = OpenWaveLinkAudio, 0x00000002, OpenWaveLinkAudio_Service_Inst
+
+[OpenWaveLinkAudio_Service_Inst]
+DisplayName    = %ServiceDesc%
+ServiceType    = 1 ; SERVICE_KERNEL_DRIVER
+StartType      = 3 ; SERVICE_DEMAND_START
+ErrorControl   = 1 ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %13%\OpenWaveLinkAudio.sys
+
+[Strings]
+ProviderName        = "OpenWaveLink Community"
+ManufacturerName    = "OpenWaveLink Systems"
+DiskDescription     = "OpenWaveLink Virtual Audio Installation Disk"
+DeviceDesc          = "OpenWaveLink Virtual Audio Device (WaveRT)"
+ServiceDesc         = "OpenWaveLink Virtual Audio WDM Service"
+
+WaveRender.FriendlyName   = "OpenWaveLink Aux"
+WaveMicFX.FriendlyName    = "OpenWaveLink MicFX"
+WaveStreamIn.FriendlyName = "OpenWaveLink Stream Mix"
+Topology.FriendlyName     = "OpenWaveLink Audio Topology"
+
+KSNAME_WaveRender    = "WaveRender"
+KSNAME_WaveMicFX     = "WaveMicFX"
+KSNAME_WaveStreamIn  = "WaveStreamIn"
+KSNAME_Topology      = "Topology"
+
+Proxy.CLSID         = "{17CCA71B-ECD7-11D0-B908-00A0C9223196}"
+KSCATEGORY_AUDIO    = "{6994AD04-93EF-11D0-A3CC-00A0C9223196}"
+KSCATEGORY_RENDER   = "{65E8773E-8F56-11D0-A3B9-00A0C9223196}"
+KSCATEGORY_CAPTURE  = "{65E8773D-8F56-11D0-A3B9-00A0C9223196}"
+KSCATEGORY_TOPOLOGY = "{DDA54A40-1E4C-11D1-A050-00AA006C4708}"

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "OpenWaveLink",
+  "version": "0.1.0",
+  "identifier": "org.openwavelink.app",
+  "build": {
+    "frontendDist": "ui/dist",
+    "beforeDevCommand": "pnpm --prefix ui run dev",
+    "beforeBuildCommand": "pnpm --prefix ui run build"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "OpenWaveLink - Windows 11 Audio Matrix",
+        "url": "index.html",
+        "width": 1280,
+        "height": 820,
+        "minWidth": 980,
+        "minHeight": 640,
+        "resizable": true,
+        "decorations": true,
+        "transparent": true,
+        "visible": true
+      },
+      {
+        "label": "flyout",
+        "title": "OpenWaveLink Flyout",
+        "url": "index.html#/flyout",
+        "width": 360,
+        "height": 480,
+        "resizable": false,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "visible": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/icon.png"
+    ]
+  }
+}

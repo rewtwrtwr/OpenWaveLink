@@ -1,0 +1,76 @@
+2026/10/10 20:08:22.531640 ============================================================
+2026/10/10 20:08:22.556586 Virtual Cables 0.5.13 (windows/amd64)
+2026/10/10 20:08:22.565363 Process started. Executable: D:\WORKSPACE\OpenWaveLink\bin\virtualcables.exe
+2026/10/10 20:08:22.569478 Log file: C:\Users\gorik\AppData\Local\Virtual Cables\VirtualCables_USBIP.log
+2026/10/10 20:08:22.573608 USB/IP protocol: 0x0111
+2026/10/10 20:08:22.579757 USB/IP server listening on 127.0.0.1:3240 with 1 device(s)
+2026/10/10 20:08:22.579757 Virtual Cables 0.5.13 started with 1 cable(s)
+2026/10/10 20:08:22.715989 One-time administrator broker connected
+2026/10/10 20:08:22.756837 device-list request from 127.0.0.1:58304
+2026/10/10 20:08:22.807646 import accepted: 1-1 (OWL), client 127.0.0.1:58306
+2026/10/10 20:08:22.810211 Windows Sound now synchronized with 1 cable(s)
+2026/10/10 20:08:22.941224 1-1 CTRL seq=3 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0100 wIndex=0x0000 wLength=64
+2026/10/10 20:08:22.952027 1-1 CTRL seq=5 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0100 wIndex=0x0000 wLength=18
+2026/10/10 20:08:22.959280 1-1 CTRL seq=7 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0200 wIndex=0x0000 wLength=255
+2026/10/10 20:08:22.959801 1-1 CTRL seq=9 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0303 wIndex=0x0409 wLength=255
+2026/10/10 20:08:22.960313 1-1 CTRL seq=11 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0300 wIndex=0x0000 wLength=255
+2026/10/10 20:08:22.960313 1-1 CTRL seq=13 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0302 wIndex=0x0409 wLength=255
+2026/10/10 20:08:22.962367 1-1 CTRL seq=15 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0100 wIndex=0x0000 wLength=18
+2026/10/10 20:08:22.964441 1-1 CTRL seq=17 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0200 wIndex=0x0000 wLength=9
+2026/10/10 20:08:22.968138 1-1 CTRL seq=19 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0200 wIndex=0x0000 wLength=194
+2026/10/10 20:08:22.974414 1-1 CTRL seq=20 dir=OUT bmRequestType=0x00 bRequest=0x09 wValue=0x0001 wIndex=0x0000 wLength=0
+2026/10/10 20:08:22.976569 1-1 CTRL seq=23 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0302 wIndex=0x0409 wLength=4
+2026/10/10 20:08:22.977101 1-1 CTRL seq=25 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0302 wIndex=0x0409 wLength=8
+2026/10/10 20:08:22.979189 1-1 CTRL seq=27 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0302 wIndex=0x0409 wLength=4
+2026/10/10 20:08:22.981884 1-1 CTRL seq=29 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0302 wIndex=0x0409 wLength=8
+2026/10/10 20:08:22.986147 1-1 CTRL seq=31 dir=IN bmRequestType=0xA1 bRequest=0x81 wValue=0x0100 wIndex=0x0200 wLength=1
+2026/10/10 20:08:22.989833 1-1 CTRL seq=33 dir=IN bmRequestType=0xA1 bRequest=0x81 wValue=0x0200 wIndex=0x0200 wLength=2
+2026/10/10 20:08:22.990359 1-1 CTRL seq=35 dir=IN bmRequestType=0xA1 bRequest=0x82 wValue=0x0200 wIndex=0x0200 wLength=2
+2026/10/10 20:08:22.990876 1-1 CTRL seq=37 dir=IN bmRequestType=0xA1 bRequest=0x83 wValue=0x0200 wIndex=0x0200 wLength=2
+2026/10/10 20:08:22.990876 1-1 CTRL seq=39 dir=IN bmRequestType=0xA1 bRequest=0x84 wValue=0x0200 wIndex=0x0200 wLength=2
+2026/10/10 20:08:22.991398 1-1 CTRL seq=41 dir=IN bmRequestType=0xA1 bRequest=0x81 wValue=0x0100 wIndex=0x0500 wLength=1
+2026/10/10 20:08:22.993535 1-1 CTRL seq=43 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0300 wIndex=0x0000 wLength=255
+2026/10/10 20:08:22.994051 1-1 CTRL seq=45 dir=IN bmRequestType=0xA1 bRequest=0x81 wValue=0x0200 wIndex=0x0500 wLength=2
+2026/10/10 20:08:22.996635 1-1 CTRL seq=47 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0300 wIndex=0x0000 wLength=255
+2026/10/10 20:08:23.000245 1-1 CTRL seq=49 dir=IN bmRequestType=0xA1 bRequest=0x82 wValue=0x0200 wIndex=0x0500 wLength=2
+2026/10/10 20:08:23.000959 1-1 CTRL seq=51 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0301 wIndex=0x0409 wLength=255
+2026/10/10 20:08:23.000959 1-1 CTRL seq=53 dir=IN bmRequestType=0xA1 bRequest=0x83 wValue=0x0200 wIndex=0x0500 wLength=2
+2026/10/10 20:08:23.001472 1-1 CTRL seq=55 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0301 wIndex=0x0409 wLength=255
+2026/10/10 20:08:23.004615 1-1 CTRL seq=57 dir=IN bmRequestType=0xA1 bRequest=0x84 wValue=0x0200 wIndex=0x0500 wLength=2
+2026/10/10 20:08:23.008156 1-1 CTRL seq=59 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0302 wIndex=0x0409 wLength=255
+2026/10/10 20:08:23.015408 1-1 CTRL seq=61 dir=IN bmRequestType=0x80 bRequest=0x06 wValue=0x0302 wIndex=0x0409 wLength=255
+2026/10/10 20:08:23.019472 1-1 CTRL seq=62 dir=OUT bmRequestType=0x01 bRequest=0x0B wValue=0x0000 wIndex=0x0001 wLength=0
+2026/10/10 20:08:23.024038 1-1 CTRL seq=64 dir=OUT bmRequestType=0x01 bRequest=0x0B wValue=0x0000 wIndex=0x0002 wLength=0
+2026/10/10 20:08:23.897043 1-1 CTRL seq=66 dir=OUT bmRequestType=0x01 bRequest=0x0B wValue=0x0001 wIndex=0x0001 wLength=0
+2026/10/10 20:08:23.903157 1-1 URB #1 seq=68 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:23.903157 1-1 URB #2 seq=70 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:23.913532 1-1 URB #3 seq=72 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:23.923561 1-1 URB #4 seq=74 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:23.933509 1-1 URB #5 seq=76 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:23.943464 1-1 URB #6 seq=78 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:23.955903 1-1 URB #7 seq=80 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:23.964255 1-1 URB #8 seq=82 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:23.973406 1-1 URB #9 seq=84 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:23.983696 1-1 URB #10 seq=86 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:23.993937 1-1 URB #11 seq=88 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:24.003660 1-1 URB #12 seq=90 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:24.013693 1-1 URB #13 seq=92 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:24.024099 1-1 URB #14 seq=94 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:24.033373 1-1 URB #15 seq=96 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:24.043596 1-1 URB #16 seq=98 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:24.053836 1-1 URB #17 seq=100 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:24.063289 1-1 URB #18 seq=102 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:24.073683 1-1 URB #19 seq=104 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:24.084383 1-1 URB #20 seq=106 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:28.527268 device-list request from 127.0.0.1:54818
+2026/10/10 20:08:28.884507 1-1 URB #500 seq=1066 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:33.883637 1-1 URB #1000 seq=2066 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:38.883989 1-1 URB #1500 seq=3066 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:43.883445 1-1 URB #2000 seq=4066 ep=1 dir=OUT bytes=1920 iso_packets=10
+2026/10/10 20:08:49.119627 1-1 CTRL seq=4782 dir=OUT bmRequestType=0x01 bRequest=0x0B wValue=0x0001 wIndex=0x0002 wLength=0
+2026/10/10 20:08:50.433450 1-1 URB #2500 seq=5069 ep=2 dir=IN bytes=1920 iso_packets=10
+2026/10/10 20:08:52.074533 1-1 CTRL seq=5398 dir=OUT bmRequestType=0x01 bRequest=0x0B wValue=0x0000 wIndex=0x0001 wLength=0
+2026/10/10 20:08:55.433668 1-1 URB #3000 seq=6071 ep=2 dir=IN bytes=1920 iso_packets=10
+2026/10/10 20:09:00.433702 1-1 URB #3500 seq=7071 ep=2 dir=IN bytes=1920 iso_packets=10
+2026/10/10 20:09:05.433723 1-1 URB #4000 seq=8071 ep=2 dir=IN bytes=1920 iso_packets=10
+2026/10/10 20:09:10.434141 1-1 URB #4500 seq=9071 ep=2 dir=IN bytes=1920 iso_packets=10
